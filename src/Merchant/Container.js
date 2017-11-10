@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom'
 
 import { createFetchMerchants } from './actions'
 
+import Button from 'material-ui/Button';
+import AddIcon from 'material-ui-icons/Add';
+import MerchantList from './view/MerchantList'
+
 class List extends PureComponent {
   constructor(props) {
     super(props);
@@ -23,11 +27,12 @@ class List extends PureComponent {
           <Link to="/about-us">About</Link>
         </header>
         <main>
-          {this.props.merchants.map((merchant, index) => (
-            <div key={index}>
-              {merchant.firstname}
-            </div>
-          ))}
+          <MerchantList
+            data={this.props.merchants}
+          />
+          <Button fab color="primary" aria-label="add">
+            <AddIcon />
+          </Button>
         </main>
       </div>
     )
