@@ -13,11 +13,11 @@ export function createFetchMerchants() {
 
     fetch(url)
       .then(response => response.json())
-      .then(response => {
+      .then(data => {
         dispatch({
           type: MERCHANT_FETCH_SUCCESS,
           payload: {
-            data: response.tv_shows
+            data
           }
         })
       })

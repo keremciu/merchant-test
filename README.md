@@ -23,3 +23,5 @@ Default value for `API_BASE` is `http://localhost:3001` you can see above that p
 
 I used `material-ui@next` dependency for UI, as a designer I don't like Material-UI styles but material-ui
 repository built so carefully, that's why I chose it. I hope you like the UI of Application.
+
+I'd like to add an `async action middleware` to Redux, there were two options those I used before. Normally I'm familiar and happy with `redux-saga` but it would be unnecessarily big for this task that's why I preferred `redux-thunk`.
