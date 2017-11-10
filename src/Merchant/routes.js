@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-  Route,
-} from 'react-router-dom'
-import ListContainer from './Container';
+import { Route } from 'react-router-dom'
+import ListContainer from './List/Container';
+import AddContainer from './Add/Container';
+import EditContainer from './Edit/Container';
 
 export default [
-  <Route path="/" key="list" component={ ListContainer } />,
+  <Route exact path="/" key="list" component={ ListContainer } />,
+  <Route exact path="/add/" key="add" component={ AddContainer } />,
+  <Route exact path="/edit/:id" key="edit" component={ EditContainer } />,
 ];
-
-
-/* <Route path="/new" key="list" component={ CreateContainer } />,
-  <Route path="/1" key="list" component={ EditContainer } />, */

@@ -21,6 +21,15 @@
   font-size: large;
 }
 
+.LoadableWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.8);
+  min-height: 100px;
+}
+
 @keyframes App-logo-appearance {
   from {
     opacity: 0;

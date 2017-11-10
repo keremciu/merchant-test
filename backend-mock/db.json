@@ -2,18 +2,50 @@
   "merchants": [
     {
       "id": 1,
-      "firstname": "Kerem",
+      "firstname": "Kerem6",
       "lastname": "Sevencan",
-      "avatarUrl": "abc.jpg",
+      "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg",
       "email": "kerem@ritmix.org",
       "phone": "+905392063306",
       "hasPremium": true,
-      "bids": [{
-        "id": 1,
-        "carTitle": "Audi",
-        "amount": 1000,
-        "created": "ABC"
-      }]
+      "bids": [
+        {
+          "id": 1,
+          "carTitle": "Audi",
+          "amount": 1000,
+          "created": "ABC"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstname": "Test54",
+      "lastname": "Duzelttim5",
+      "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg",
+      "email": "bc@asdfsadf.com",
+      "phone": "+905392063306",
+      "hasPremium": false,
+      "bids": []
+    },
+    {
+      "firstname": "Test",
+      "lastname": "abc",
+      "email": "kerem@ritmix.oasd",
+      "phone": "12341234",
+      "avatarUrl": "asdfasd",
+      "hasPremium": false,
+      "bids": [],
+      "id": 3
+    },
+    {
+      "hasPremium": false,
+      "bids": [],
+      "firstname": "test",
+      "lastname": "asdfadf",
+      "email": "kerem@asdf.com",
+      "phone": "5325",
+      "avatarUrl": "12341234",
+      "id": 4
     }
   ]
 }
