@@ -1,0 +1,19 @@
+{
+  "merchants": [
+    {
+      "id": 1,
+      "firstname": "Kerem",
+      "lastname": "Sevencan",
+      "avatarUrl": "abc.jpg",
+      "email": "kerem@ritmix.org",
+      "phone": "+905392063306",
+      "hasPremium": true,
+      "bids": [{
+        "id": 1,
+        "carTitle": "Audi",
+        "amount": 1000,
+        "created": "ABC"
+      }]
+    }
+  ]
+}
