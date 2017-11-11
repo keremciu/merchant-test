@@ -24,7 +24,7 @@ const theme = createMuiTheme({
     },
     secondary: {
       ...orange,
-      'A200': '#ff8c3b'
+      'A200': '#e87f36'
     }
   },
 });

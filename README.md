@@ -18,7 +18,8 @@ Firstly, Merchant looks like a division.
 That's why I prefer split everything about the Merchant division from the Application.
 Whenever you need a new division, you can use the same structure, it looks easy to understand and scalable for me.
 
-In Merchant division, List, Add and Edit functions have their own Containers but I decide to put delete function into the List Container. Normally, using `DELETE` method is not a good idea on any platform, we should use `PATCH` method to add `isDeleted` property to our database object but in this case I used mock-api's delete method.
+In Merchant division, List, Detail, Add and Edit functions have their own Containers but I decide to put delete function into the List Container. Normally, using `DELETE` method is not a good idea on any platform, we should use `PATCH` method to add `isDeleted` property to our database object but in this case I used mock-api's delete method.
+Rest API could handle my case.
 
 There is an another functionality on delete function is normally on single page applications, if you delete something, you have the ID of the deleted object but if you delete on Redux side with the ID, you made a choice to do not check new data on server side. Especially, in large javascript applications you should make a new fetch merchants request after deletion but I decide to write some javascript that's why I deleted on redux ie Client side.
 

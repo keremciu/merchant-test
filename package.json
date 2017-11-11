@@ -1,6 +1,7 @@
 {
   "name": "auto1-test-task",
   "version": "1.0.0",
+  "homepage": "https://keremciu.github.io/merchant-test",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
@@ -51,7 +52,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "api": "json-server --watch db.json --port 3001",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -93,5 +97,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
   }
 }

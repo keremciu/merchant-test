@@ -27,7 +27,7 @@ const BidList = props => {
               <TableRow hover key={bid.id}>
                 <TableCell>{bid.id}</TableCell>
                 <TableCell>{bid.carTitle}</TableCell>
-                <TableCell numeric>{bid.amount}</TableCell>
+                <TableCell numeric>€ {bid.amount}</TableCell>
                 <TableCell numeric>{new Date(bid.created).toLocaleString()}</TableCell>
               </TableRow>
             );
