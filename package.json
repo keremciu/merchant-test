@@ -1,7 +1,7 @@
 {
   "name": "auto1-test-task",
   "version": "1.0.0",
-  "homepage": "https://keremciu.github.io/merchant-test",
+  "homepage": "https://keremciu.github.io/",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",

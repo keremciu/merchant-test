@@ -23,8 +23,8 @@ Rest API could handle my case.
 
 There is an another functionality on delete function is normally on single page applications, if you delete something, you have the ID of the deleted object but if you delete on Redux side with the ID, you made a choice to do not check new data on server side. Especially, in large javascript applications you should make a new fetch merchants request after deletion but I decide to write some javascript that's why I deleted on redux ie Client side.
 
-Application needs to know Mock-API URL that's why I add an `environment variable` which is called `API_BASE`.
-Default value for `API_BASE` is `http://localhost:3001` you can see above that port which one you need to give json-server command.
+Application needs to know Mock-API URL that's why I add an `environment variable` which is called `REACT_APP_API_BASE`.
+Default value for `REACT_APP_API_BASE` is `http://localhost:3001` you can see above that port which one you need to give json-server command.
 
 It was hard to imagine an interface without any design spec that's why my navigation looks different, I don't put a back button on UI you can go home screen by clicking logo or welcome text.
 
@@ -36,3 +36,17 @@ I'd like to add an `async action middleware` to Redux, there were two options th
 I built some components about the flow but mock-api is so fast, there should be a problem to catch loading animation :)
 
 I created a random data using jsonplaceholder.typicode.com and uifaces.com also I track car titles from auto1.com using `big-car-card__title` class selector.
+
+# Deploy
+
+I have two instance to deploy.
+
+One of them is API. `json-server` dependency has a free service on typicode.com. I used it.
+
+Before deploy I made a new build with the url of service with below command:
+
+`REACT_APP_API_BASE=https://my-json-server.typicode.com/keremciu/merchant-test/ yarn build`
+
+Then I used `surge.sh` to deploy my client instance with below command:
+
+`surge`

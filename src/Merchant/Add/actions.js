@@ -3,7 +3,7 @@ export const MERCHANT_ADD_SUCCESS = 'MERCHANT_ADD_SUCCESS';
 export const MERCHANT_ADD_FAILED = 'MERCHANT_ADD_FAILED';
 
 export function createAddMerchant(data, callback) {
-  const url =`${process.env.API_BASE}merchants/`;
+  const url =`${process.env.REACT_APP_API_BASE}merchants/`;
 
   return function (dispatch) {
     dispatch({

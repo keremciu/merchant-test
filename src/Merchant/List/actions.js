@@ -3,7 +3,7 @@ export const MERCHANT_LIST_FETCH_SUCCESS = 'MERCHANT_LIST_FETCH_SUCCESS';
 export const MERCHANT_LIST_FETCH_FAILED = 'MERCHANT_LIST_FETCH_FAILED';
 
 export function createFetchMerchants() {
-  const url =`${process.env.API_BASE}merchants?page=1`;
+  const url =`${process.env.REACT_APP_API_BASE}merchants?page=1`;
 
   return function (dispatch) {
     dispatch({
@@ -37,7 +37,7 @@ export const MERCHANT_DELETE_SUCCESS = 'MERCHANT_DELETE_SUCCESS';
 export const MERCHANT_DELETE_FAILED = 'MERCHANT_DELETE_FAILED';
 
 export function createDeleteMerchant(id, callback) {
-  const url =`${process.env.API_BASE}merchants/${id}`;
+  const url =`${process.env.REACT_APP_API_BASE}merchants/${id}`;
 
   return function (dispatch) {
     dispatch({

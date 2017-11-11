@@ -3,7 +3,7 @@ export const MERCHANT_FETCH_SUCCESS = 'MERCHANT_FETCH_SUCCESS';
 export const MERCHANT_FETCH_FAILED = 'MERCHANT_FETCH_FAILED';
 
 export function createFetchMerchant(id) {
-  const url =`${process.env.API_BASE}merchants/${id}`;
+  const url =`${process.env.REACT_APP_API_BASE}merchants/${id}`;
 
   return function (dispatch) {
     dispatch({
@@ -44,7 +44,7 @@ export const MERCHANT_EDIT_SUCCESS = 'MERCHANT_EDIT_SUCCESS';
 export const MERCHANT_EDIT_FAILED = 'MERCHANT_EDIT_FAILED';
 
 export function createEditMerchant(id, data, callback) {
-  const url =`${process.env.API_BASE}merchants/${id}`;
+  const url =`${process.env.REACT_APP_API_BASE}merchants/${id}`;
 
   return function (dispatch) {
     dispatch({
