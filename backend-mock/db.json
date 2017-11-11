@@ -2,7 +2,7 @@
   "merchants": [
     {
       "id": 1,
-      "firstname": "Kerem6",
+      "firstname": "Kerem",
       "lastname": "Sevencan",
       "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/zeldman/128.jpg",
       "email": "kerem@ritmix.org",
@@ -11,41 +11,118 @@
       "bids": [
         {
           "id": 1,
-          "carTitle": "Audi",
+          "carTitle": "Fiat Panda 1.3 JTD Base 4x4",
           "amount": 1000,
-          "created": "ABC"
+          "created": "Sat Sep 09 2017 21:13:03 GMT+0300 (EET)"
+        },
+        {
+          "id": 2,
+          "carTitle": "Mazda RX-8 1.3 Wankel Renesis",
+          "amount": 654,
+          "created": "Sun Apr 16 2017 03:42:00 GMT+0300 (EET)"
+        },
+        {
+          "id": 3,
+          "carTitle": "BMW 5er 520d",
+          "amount": 1586,
+          "created": "Mon Mar 06 2017 07:08:56 GMT+0300 (EET)"
         }
       ]
     },
     {
       "id": 2,
-      "firstname": "Test54",
-      "lastname": "Duzelttim5",
+      "firstname": "Ervin",
+      "lastname": "Howell",
       "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg",
-      "email": "bc@asdfsadf.com",
-      "phone": "+905392063306",
+      "email": "Shanna@melissa.tv",
+      "phone": "010-692-6593 x09125",
+      "hasPremium": false,
+      "bids": [
+        {
+          "id": 4,
+          "carTitle": "Volkswagen Caddy 1.9 TDI Life",
+          "amount": 653,
+          "created": "Sat Mar 25 2017 05:13:41 GMT+0300 (EET)"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstname": "Clementine",
+      "lastname": "Bauch",
+      "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg",
+      "email": "Nathan@yesenia.net",
+      "phone": "1-463-123-4447",
       "hasPremium": false,
       "bids": []
     },
     {
-      "firstname": "Test",
-      "lastname": "abc",
-      "email": "kerem@ritmix.oasd",
-      "phone": "12341234",
-      "avatarUrl": "asdfasd",
-      "hasPremium": false,
-      "bids": [],
-      "id": 3
+      "id": 4,
+      "firstname": "Patricia",
+      "lastname": "Lebsack",
+      "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/_hartjeg/128.jpg",
+      "email": "Julianne.OConner@kory.org",
+      "phone": "493-170-9623 x156",
+      "hasPremium": true,
+      "bids": [
+        {
+          "id": 5,
+          "carTitle": "Volkswagen Passat 2.0 TDI DPF Basis 4Motion",
+          "amount": 321,
+          "created": "Sun Nov 05 2017 20:02:41 GMT+0300 (EET)"
+        },
+        {
+          "id": 6,
+          "carTitle": "Seat Leon 1.6 TDI Reference",
+          "amount": 677,
+          "created": "Thu Feb 16 2017 07:44:45 GMT+0300 (EET)"
+        }
+      ]
     },
     {
+      "id": 5,
+      "firstname": "Chelsey",
+      "lastname": "Dietrich",
+      "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/mattchevy/128.jpg",
+      "email": "Lucio_Hettinger@annie.ca",
+      "phone": "(254)954-1289",
+      "hasPremium": true,
+      "bids": [
+        {
+          "id": 7,
+          "carTitle": "Mercedes-Benz B-Klasse B 180 CDI Urban",
+          "amount": 1235,
+          "created": "Mon Apr 17 2017 14:01:49 GMT+0300 (EET)"
+        },
+        {
+          "id": 8,
+          "carTitle": "Fiat Doblo 1.3 JTD Basis Maxi Kasten",
+          "amount": 344,
+          "created": "Mon Jan 02 2017 15:48:32 GMT+0300 (EET)"
+        },
+        {
+          "id": 9,
+          "carTitle": "Audi Q7 3.0 V6 TDI Quattro",
+          "amount": 1860,
+          "created": "Sat May 13 2017 09:28:04 GMT+0300 (EET)"
+        },
+        {
+          "id": 10,
+          "carTitle": "Renault Scenic 1.9 dCi Diesel Privilege Luxe",
+          "amount": 772,
+          "created": "Sun Sep 10 2017 10:49:00 GMT+0300 (+03)"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "firstname": "Nicholas",
+      "lastname": "Runolfsdottir",
+      "avatarUrl": "https://s3.amazonaws.com/uifaces/faces/twitter/andyvitale/128.jpg",
+      "email": "Sherwood@rosamond.me",
+      "phone": "586.493.6943 x140",
       "hasPremium": false,
-      "bids": [],
-      "firstname": "test",
-      "lastname": "asdfadf",
-      "email": "kerem@asdf.com",
-      "phone": "5325",
-      "avatarUrl": "12341234",
-      "id": 4
+      "bids": []
     }
   ]
 }

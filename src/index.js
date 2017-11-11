@@ -8,6 +8,7 @@ import {
 
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles'
 import blue from 'material-ui/colors/blue'
+import orange from 'material-ui/colors/orange'
 
 import { routes as merchantRoutes } from "./Merchant";
 import './index.css';
@@ -21,6 +22,10 @@ const theme = createMuiTheme({
       ...blue,
       500: '#1B4691',
     },
+    secondary: {
+      ...orange,
+      'A200': '#ff8c3b'
+    }
   },
 });
 const store = configureStore();
@@ -28,13 +33,13 @@ const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
-      <AppContainer>
-        <Router>
+      <Router>
+        <AppContainer>
           <Switch>
             {merchantRoutes}
           </Switch>
-        </Router>
-      </AppContainer>
+        </AppContainer>
+      </Router>
     </MuiThemeProvider>
   </Provider>,
   document.getElementById('root')

@@ -1,5 +1,3 @@
-import Snackbar from 'Components/Snackbar'
-
 export const MERCHANT_ADD_START = 'MERCHANT_ADD_START';
 export const MERCHANT_ADD_SUCCESS = 'MERCHANT_ADD_SUCCESS';
 export const MERCHANT_ADD_FAILED = 'MERCHANT_ADD_FAILED';
@@ -30,9 +28,6 @@ export function createAddMerchant(data, callback) {
           payload: {
             data
           }
-        })
-        Snackbar({
-          message: `You added ${data.firstname} ${data.lastname} as a new merchant.`
         })
         if (callback) {
           callback();

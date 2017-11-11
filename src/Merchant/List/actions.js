@@ -31,3 +31,44 @@ export function createFetchMerchants() {
       })
   }
 }
+
+export const MERCHANT_DELETE_START = 'MERCHANT_DELETE_START';
+export const MERCHANT_DELETE_SUCCESS = 'MERCHANT_DELETE_SUCCESS';
+export const MERCHANT_DELETE_FAILED = 'MERCHANT_DELETE_FAILED';
+
+export function createDeleteMerchant(id, callback) {
+  const url =`${process.env.API_BASE}merchants/${id}`;
+
+  return function (dispatch) {
+    dispatch({
+      type: MERCHANT_DELETE_START,
+      payload: {
+        id,
+      },
+    });
+
+    fetch(url, {
+        method: 'DELETE',
+      })
+      .then(response => response.json())
+      .then(data => {
+        dispatch({
+          type: MERCHANT_DELETE_SUCCESS,
+          payload: {
+            id,
+          }
+        })
+        if (callback) {
+          callback();
+        }
+      })
+      .catch(error => {
+        dispatch({
+          type: MERCHANT_DELETE_FAILED,
+          payload: {
+            error
+          }
+        })
+      })
+  }
+}

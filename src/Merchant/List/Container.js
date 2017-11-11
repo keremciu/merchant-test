@@ -2,13 +2,37 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import Typography from 'material-ui/Typography';
 
-import { createFetchMerchants } from './actions'
+import { createFetchMerchants, createDeleteMerchant } from './actions'
 import MerchantList from '../view/MerchantList'
 import Loadable from 'Components/Loadable'
+import ConfirmDialog from 'Components/Dialog'
+import Snackbar from 'Components/Snackbar'
 
 class List extends PureComponent {
+  constructor(props) {
+    super(props);
+
+    this.deleteMerchant = this.deleteMerchant.bind(this);
+  }
+
   componentWillMount() {
-    this.props.dispatch(createFetchMerchants());
+    this.props.fetchMerchants();
+  }
+
+  deleteMerchant(merchant) {
+    ConfirmDialog({
+      title: `Are you sure you want to delete "${merchant.firstname} ${merchant.lastname}"?`,
+      onConfirm: () => {
+        this.props.deleteMerchant(
+          merchant.id,
+          () => {
+            Snackbar({
+              message: `Merchant ${merchant.firstname} ${merchant.lastname} has deleted on the system.`
+            })
+          }
+        );
+      }
+    })
   }
 
   render() {
@@ -23,6 +47,7 @@ class List extends PureComponent {
           <main>
             <MerchantList
               data={this.props.merchants}
+              deleteMerchant={this.deleteMerchant}
             />
           </main>
         </div>
@@ -39,7 +64,11 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  dispatch: action => action,
+  fetchMerchants: createFetchMerchants,
+  deleteMerchant: createDeleteMerchant
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(List);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(List);

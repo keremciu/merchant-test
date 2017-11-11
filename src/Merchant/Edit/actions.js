@@ -1,5 +1,3 @@
-import Snackbar from 'Components/Snackbar'
-
 export const MERCHANT_FETCH_START = 'MERCHANT_FETCH_START';
 export const MERCHANT_FETCH_SUCCESS = 'MERCHANT_FETCH_SUCCESS';
 export const MERCHANT_FETCH_FAILED = 'MERCHANT_FETCH_FAILED';
@@ -21,7 +19,12 @@ export function createFetchMerchant(id) {
         dispatch({
           type: MERCHANT_FETCH_SUCCESS,
           payload: {
-            data
+            data: {
+              ...data,
+              bids: data.bids.sort((a, b) => (
+                new Date(a.created).getTime() - new Date(b.created).getTime()
+              ))
+            }
           }
         })
       })
@@ -67,9 +70,6 @@ export function createEditMerchant(id, data, callback) {
           payload: {
             data
           }
-        })
-        Snackbar({
-          message: `The data of ${data.firstname} ${data.lastname} merchant has changed.`
         })
         if (callback) {
           callback();

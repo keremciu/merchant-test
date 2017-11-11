@@ -17,6 +17,10 @@
   color: white;
 }
 
+.App-header h2 {
+  color: white;
+}
+
 .App-intro {
   font-size: large;
 }

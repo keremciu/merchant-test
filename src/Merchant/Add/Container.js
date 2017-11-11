@@ -4,6 +4,7 @@ import Typography from 'material-ui/Typography'
 import { createAddMerchant } from './actions'
 import MerchantForm from '../view/MerchantForm'
 import Loadable from 'Components/Loadable'
+import Snackbar from 'Components/Snackbar'
 
 class Add extends PureComponent {
   constructor(props) {
@@ -14,13 +15,15 @@ class Add extends PureComponent {
 
   addMerchant(values) {
     const callbackAfterSuccess = () => {
+      Snackbar({
+        message: `You added ${values.firstname} ${values.lastname} as a new merchant.`
+      })
       this.props.history.push('/');
     }
-    this.props.dispatch(
-      createAddMerchant(
-        values,
-        callbackAfterSuccess
-      )
+
+    this.props.addMerchant(
+      values,
+      callbackAfterSuccess
     );
   }
 
@@ -55,7 +58,7 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-  dispatch: action => action,
+  addMerchant: createAddMerchant
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Add);
