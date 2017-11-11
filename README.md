@@ -5,7 +5,7 @@ I use json-server dependency to run a mock-api which is structured by you.
 You should install then run it before front-end side.
 
 `npm install -g json-server`
-`json-server --watch db.json --port 3001`
+`json-server --watch db.json --port 3001` or `yarn api`
 
 # To start
 
@@ -41,9 +41,11 @@ I created a random data using jsonplaceholder.typicode.com and uifaces.com also 
 
 I have two instance to deploy.
 
-One of them is API. `json-server` dependency has a free service on typicode.com. I used it.
+One of them is API. `json-server` dependency has a free service on typicode.com. I used it. 
 
-Before deploy I made a new build with the url of service with below command:
+**WARN** If you'd like to change something on the data, you should install the application, API service typicode.com doesn't allow changes on the data. It's all about to show how it works.
+
+Before deploy I made a new build with the url of typicode service with below command:
 
 `REACT_APP_API_BASE=https://my-json-server.typicode.com/keremciu/merchant-test/ yarn build`
 
